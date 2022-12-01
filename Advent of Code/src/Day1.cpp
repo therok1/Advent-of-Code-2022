@@ -47,7 +47,7 @@ unsigned int findElfWithMostCalories(const std::vector<unsigned int>& elvesCalor
 
 unsigned int findThreeElvesWithMostCalories(std::vector<unsigned int> elvesCalories)
 {
-	int sum = 0;
+	unsigned int sum = 0;
 	std::sort(elvesCalories.begin(), elvesCalories.end());
 	for (std::size_t i = elvesCalories.size() - 1; i > elvesCalories.size() - 4; i--)
 	{
