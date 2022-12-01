@@ -32,7 +32,7 @@ std::vector<unsigned int> sumElvesCalories(const std::vector<std::vector<std::st
 	std::vector<unsigned int> elvesCalories;
 	for (auto& elf : elves)
 	{
-		int sum = 0;
+		unsigned int sum = 0;
 		for (auto& calories : elf)
 			sum += std::stoi(calories);
 		elvesCalories.push_back(sum);
