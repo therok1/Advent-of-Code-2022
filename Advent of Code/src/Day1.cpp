@@ -62,11 +62,11 @@ void Day1()
 {
 	std::vector<std::vector<std::string>> elves = distributeElves("res/Input.txt");
 	std::vector<unsigned int> elvesCalories = sumElvesCalories(elves);
-	unsigned int mostCcalories = findElfWithMostCalories(elvesCalories);
+	unsigned int mostCalories = findElfWithMostCalories(elvesCalories);
 	unsigned int topThreeCalories = findThreeElvesWithMostCalories(elvesCalories);
 
 	std::cout << "Advent of Code 2022, Day 1" << std::endl;
-	std::cout << "Most calories an elf is carrying: " << mostCcalories << std::endl;
+	std::cout << "Most calories an elf is carrying: " << mostCalories << std::endl;
 	std::cout << "Calories sum of top three elves: " << topThreeCalories << std::endl;
 	std::cout << std::endl;
 }
