@@ -18,7 +18,7 @@ std::vector<std::vector<std::string>> distributeElves(const std::string& filepat
 			if ((currentElf + 1) > elves.size())
 				elves.push_back(elf);
 			if (!line.empty())
-				elves[currentElf].push_back(line);
+				elves.at(currentElf).push_back(line);
 			else
 				currentElf++;
 		}
@@ -51,7 +51,7 @@ unsigned int findThreeElvesWithMostCalories(std::vector<unsigned int> elvesCalor
 	std::sort(elvesCalories.begin(), elvesCalories.end());
 	for (std::size_t i = elvesCalories.size() - 1; i > elvesCalories.size() - 4; i--)
 	{
-		auto element = elvesCalories[i];
+		auto element = elvesCalories.at(i);
 		sum += element;
 	}
 		
@@ -60,7 +60,7 @@ unsigned int findThreeElvesWithMostCalories(std::vector<unsigned int> elvesCalor
 
 void Day1()
 {
-	std::vector<std::vector<std::string>> elves = distributeElves("res/Input.txt");
+	std::vector<std::vector<std::string>> elves = distributeElves("res/Input1.txt");
 	std::vector<unsigned int> elvesCalories = sumElvesCalories(elves);
 	unsigned int mostCalories = findElfWithMostCalories(elvesCalories);
 	unsigned int topThreeCalories = findThreeElvesWithMostCalories(elvesCalories);
