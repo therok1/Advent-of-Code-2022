@@ -44,7 +44,7 @@ std::string getCommonLettersP2(const std::vector<std::vector<std::string>>& grou
 			currentUniqueString.clear();
 		}
 		for (auto& letter : repeatingLetters)
-			if (letter.second == 3)
+			if (letter.second == group.size())
 				commonLetters += letter.first;
 	}
 	return commonLetters;
