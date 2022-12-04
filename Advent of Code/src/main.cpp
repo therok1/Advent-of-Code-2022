@@ -13,7 +13,7 @@ int main()
 
 	auto end = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
-	std::cout << "Execution time: " << duration.count() << std::endl;
+	std::cout << "Execution time: " << duration.count() << "us" << std::endl;
 
 	return 0;
 }
