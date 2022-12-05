@@ -40,7 +40,7 @@ std::string getCommonLettersP2(const std::vector<std::vector<std::string>>& grou
 				repeatingLetters.insert(std::make_pair(letter, 0));
 			}
 			for (auto& letter : currentUniqueString)
-				repeatingLetters[letter.first] += 1;
+				repeatingLetters.at(letter.first) += 1;
 			currentUniqueString.clear();
 		}
 		for (auto& letter : repeatingLetters)
@@ -54,9 +54,6 @@ std::vector<std::string> getBackpacks(const std::string& filepath)
 {
 	std::ifstream file(filepath);
 	std::vector<std::string> backpacks;
-
-	backpacks.reserve(300);
-
 	if (file.is_open())
 	{
 		std::string line;
@@ -70,18 +67,12 @@ std::vector<std::string> getBackpacks(const std::string& filepath)
 std::vector<std::vector<std::string>> distributeIntoGroups(const std::vector<std::string>& backpacks)
 {
 	std::vector<std::vector<std::string>> groups;
-
-	groups.reserve(100);
-
 	for (std::size_t i = 0; i < backpacks.size(); i += 3)
 	{
 		std::vector<std::string> group;
-
-		group.reserve(3);
-
-		group.push_back(backpacks[i]);
-		group.push_back(backpacks[i + 1]);
-		group.push_back(backpacks[i + 2]);
+		group.push_back(backpacks.at(i));
+		group.push_back(backpacks.at(i + 1));
+		group.push_back(backpacks.at(i + 2));
 		groups.push_back(group);
 	}
 	return groups;

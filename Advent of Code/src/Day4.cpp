@@ -21,14 +21,11 @@ std::vector<AssignmentPair> parseSections(const std::vector<std::string>& sectio
 		std::string rightToken = section.substr(section.find(",") + 1, section.size());
 		std::vector<int> numbers;
 		std::stringstream left(leftToken), right(rightToken);
-
-		numbers.reserve(4);
-
 		for (int i = 0; left >> i; )
 			numbers.push_back(std::abs(i));
 		for (int i = 0; right >> i; )
 			numbers.push_back(std::abs(i));
-		sectionAssignments.push_back(AssignmentPair(numbers[0], numbers[1], numbers[2], numbers[3]));
+		sectionAssignments.push_back(AssignmentPair(numbers.at(0), numbers.at(1), numbers.at(2), numbers.at(3)));
 	}
 	return sectionAssignments;
 }
@@ -37,9 +34,6 @@ std::vector<std::string> getSections(const std::string& filepath)
 {
 	std::ifstream file(filepath);
 	std::vector<std::string> sections;
-
-	sections.reserve(1000);
-
 	if (file.is_open())
 	{
 		std::string line;

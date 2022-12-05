@@ -9,9 +9,6 @@ std::vector<std::pair<char, char>> getScores(const std::string& filepath)
 {
 	std::ifstream file(filepath);
 	std::vector<std::pair<char, char>> rounds;
-
-	rounds.reserve(2500);
-
 	if (file.is_open())
 	{
 		std::string line;
@@ -28,9 +25,7 @@ unsigned int calculateScore(const std::vector<std::pair<char, char>>& rounds,
 {
 	unsigned int score = 0;
 	for (auto& round : rounds)
-	{
 		score += outcomeScores.at(round) + shapeScores.at(round.second);
-	}
 	return score;
 }
 

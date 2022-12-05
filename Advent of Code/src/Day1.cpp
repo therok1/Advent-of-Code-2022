@@ -5,10 +5,6 @@ std::vector<std::vector<std::string>> distributeElves(const std::string& filepat
 	std::ifstream file(filepath);
 	std::vector<std::vector<std::string>> elves;
 	std::vector<std::string> elf;
-
-	elves.reserve(250);
-	elf.reserve(15);
-
 	if (file.is_open())
 	{
 		std::size_t currentElf = 0;
