@@ -103,8 +103,7 @@ std::vector<std::stack<char>> constructStacksP2(const std::vector<std::string>& 
 			crates.push_back(crate);
 		}
 		for (std::ptrdiff_t i = crates.size() - 1; i >= 0; i--)
-			stacks.at(dst).push(crates.at(i));
-			
+			stacks.at(dst).push(crates.at(i));	
 	}
 	return stacks;
 }
