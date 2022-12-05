@@ -52,7 +52,6 @@ std::vector<std::stack<char>> constructStacks(const std::vector<std::string>& in
 		int amount = std::stoi(tokens.at(1));
 		int src = std::stoi(tokens.at(3)) - 1;
 		int dst = std::stoi(tokens.at(5)) - 1;
-
 		while (amount-- > 0)
 		{
 			char crate = stacks.at(src).top();
