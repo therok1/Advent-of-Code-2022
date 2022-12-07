@@ -9,6 +9,9 @@
 #include <map>
 #include <sstream>
 #include <stack>
+#include <unordered_set>
+#include <unordered_map>
+#include <numeric>
 
 void Day1();
 void Day2();
@@ -16,3 +19,4 @@ void Day3();
 void Day4();
 void Day5();
 void Day6();
+void Day7();
