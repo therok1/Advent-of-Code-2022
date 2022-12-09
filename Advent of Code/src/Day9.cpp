@@ -16,7 +16,10 @@ struct Point
 		std::size_t hash = p.X + 10 * p.Y;
 		return hash;
 	}
-	auto operator<=>(const Point&) const = default;
+	bool operator==(const Point& p) const
+	{
+		return (X == p.X && Y == p.Y);
+	}
 };
 
 namespace std
