@@ -14,6 +14,7 @@ int main()
 	Day6();
 	Day7();
 	Day8();
+	Day9();
 
 	auto end = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
