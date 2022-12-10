@@ -23,3 +23,4 @@ void Day6();
 void Day7();
 void Day8();
 void Day9();
+void Day10();

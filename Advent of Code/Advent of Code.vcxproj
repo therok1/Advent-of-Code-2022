@@ -149,6 +149,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Day1.cpp" />
+    <ClCompile Include="src\Day10.cpp" />
     <ClCompile Include="src\Day2.cpp" />
     <ClCompile Include="src\Day3.cpp" />
     <ClCompile Include="src\Day4.cpp" />
