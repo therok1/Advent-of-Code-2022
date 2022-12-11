@@ -54,7 +54,7 @@ void crtDraw(const std::vector<std::string>& program)
 		else if (instruction == "noop")
 			signals.push_back(registerValue);
 	}
-	std::size_t w = 40, h = 6;
+	constexpr std::size_t w = 40, h = 6;
 	std::vector<char> crt(w * h, '.');
 	for (std::size_t i = 0; i < crt.size(); i++)
 	{
