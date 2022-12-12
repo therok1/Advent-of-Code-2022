@@ -14,6 +14,7 @@
 #include <numeric>
 #include <array>
 #include <functional>
+#include <queue>
 
 void Day1();
 void Day2();
@@ -26,3 +27,4 @@ void Day8();
 void Day9();
 void Day10();
 void Day11();
+void Day12();
