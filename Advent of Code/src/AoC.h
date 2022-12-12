@@ -13,6 +13,7 @@
 #include <unordered_map>
 #include <numeric>
 #include <array>
+#include <functional>
 
 void Day1();
 void Day2();
@@ -24,3 +25,4 @@ void Day7();
 void Day8();
 void Day9();
 void Day10();
+void Day11();
